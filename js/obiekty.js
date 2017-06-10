@@ -1,16 +1,15 @@
 'use strict' 
 
-var kaja = {
-    imie: "Kaja",
-    wzrost: 152,
-    przedstawOsobe: function() {console.log(this.imie)}
+function Osoba(imie,nazwisko){
+    this.imie = imie;
+    this.nazwisko = nazwisko;
+    this.wyswietlInfo = function() {
+        console.log("Imię" + this.imie+ "Nazwisko" + this.nazwisko);
+    }
 }
 
-var krystian = {
-    imie: "Krystian",
-    wzrost: 180,
-    przedstawOsobe: function() {console.log(this.imie)}
-}
+var artur = new Osoba('Artur', 'Grzes');
+artur.wyswietlInfo();
 
-kaja.przedstawOsobe();
-krystian.przedstawOsobe();
+var lukasz = new Osoba('Łukasz', 'Badocha');
+lukasz.wyswietlInfo();
